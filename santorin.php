@@ -1,5 +1,5 @@
 <?php
-$mainTitle="Hypnos Salzbourg";
+$mainTitle="Hypnos Santorin";
 require_once "header.php";
 ?>
 <!DOCTYPE html>

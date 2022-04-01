@@ -1,16 +1,17 @@
-.body{
-    background-color: aliceblue;
+body {
+    background-color: azure;
 }
-
+p{
+    font-size: 40px;
+    font-weight: bold;
+}
 .covid{
     height: 50px;
     width: 100%;
     padding: 5px;
     background-color: yellow;
     text-align: center;
-
 }
-
 .hypnos{
     height: 150px;
     width: 100px;
@@ -20,4 +21,43 @@
 }
 a{
     color: crimson;
+}
+#happy{
+    text-align: center;
+    color: #14ecec;
+}
+#loveAnimation{
+width: 50px;
+    height: 50px;
+    position: absolute;
+    color:white;
+}
+.center{
+    text-align: center;
+}
+.barStop{
+    height: 20px;
+    width: 100%;
+}
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+.infoPays{
+    text-align: center;
+    color:dodgerblue;
+}
+.redCovid{
+    text-align: center;
+    font-size: 40px;
+    color: black;
 }
