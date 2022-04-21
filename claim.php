@@ -1,5 +1,5 @@
 <?php
-$mainTitle = "Hypnos - Réservation";
+$mainTitle = "Hypnos - Claim";
 require_once "header.php";
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
 if($lang = 'fr'){
@@ -58,7 +58,7 @@ if(isset($_COOKIE["user"])){
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="reservation.php">
+                    <a class="nav-link" href="reservation.php">
                     <?php echo TXT_NAV_BUTTON_2 ?>
                     </a>
                 </li>
@@ -82,89 +82,17 @@ if(isset($_COOKIE["user"])){
     </nav>  
 <br>
  
+<div class="container">
+  <div class="row">
+    <div class="col">
         <section>    
-            <form method="post" action="reservationconfirm.php">
-                <div id="reservation">
+            <form method="post" action="claimconfirm.php">
+                <div id="reclamation">
                     <fieldset>
-                        <legend  class="d-block p-2 bg-danger text-white"><?php echo TXT_RESER_1 ?></legend>
-                            <p>
-                                <?php echo TXT_RESER_2 ?><br><br>
-                                <input type="radio" name="booking" value="Chambre Classique" id="Chambre Classique" /> <label for="Chambre Classique"><?php echo TXT_RESER_CHC ?></label><br>
-                                <input type="radio" name="booking" value="Chambre Supérieur" id="Chambre Supérieur" /> <label for="Chambre Supérieur"><?php echo TXT_RESER_CHS ?></label><br>
-                                <input type="radio" name="booking" value="Chambre Luxe" id="Chambre Luxe" /> <label for="Chambre Luxe"><?php echo TXT_RESER_CHL ?></label><br>
-                                <input type="radio" name="booking" value="Appartement" id="Appartement" /> <label for="Appartement"><?php echo TXT_RESER_APPT ?></label><br>
-                                <input type="radio" name="booking" value="Chambre sur Piloti" id="Chambre sur Piloti" /> <label for="Chambre sur Piloti"><?php echo TXT_RESER_CHPILOTI ?></label><br>
-                                <input type="radio" name="booking" value="Chambre Vue sur la Tour Eiffel" id="Chambre Vue sur la Tour Eiffel" /> <label for="Chambre Vue sur la Tour Eiffel"><?php echo TXT_RESER_CHVTE ?></label><br>
-                                <input type="radio" name="booking" value="Appartement Vue sur la Tour Eiffel" id="Appartement Vue sur la Tour Eiffel" /> <label for="Appartement Vue sur la Tour Eiffel"><?php echo TXT_RESER_APPTVTE ?></label><br>
-                                <input type="radio" name="booking" value="Chambre Vue sur le Canal" id="Chambre Vue sur le Canal" /> <label for="Chambre Vue sur le Canal"><?php echo TXT_RESER_CHLVC ?></label><br>
-                                <input type="radio" name="booking" value="Appartement Vue sur le Canal" id="Appartement Vue sur le Canal" /> <label for="Appartement Vue sur le Canal"><?php echo TXT_RESER_APPTVC ?></label>
-                            </p>
-                            <br>
-                            <p>
-                                <?php echo TXT_RESER_3 ?><br>
-                                <input type="radio" name="country" value="bali" id="bali" /> <label for="bali"><?php echo TXT_RESER_COUNTRY_1 ?></label><br>
-                                <input type="radio" name="country" value="maldives" id="maldives" /> <label for="maldives"><?php echo TXT_RESER_COUNTRY_2 ?></label><br>
-                                <input type="radio" name="country" value="marrakech" id="marrakech" /> <label for="marrakech"><?php echo TXT_RESER_COUNTRY_3 ?></label><br>
-                                <input type="radio" name="country" value="paris" id="paris" /> <label for="paris"><?php echo TXT_RESER_COUNTRY_4 ?></label><br>
-                                <input type="radio" name="country" value="salzbourg" id="salzbourg" /> <label for="salzbourg"><?php echo TXT_RESER_COUNTRY_5 ?></label><br>
-                                <input type="radio" name="country" value="santorin" id="santorin" /> <label for="santorin"><?php echo TXT_RESER_COUNTRY_6 ?></label><br>
-                                <input type="radio" name="country" value="venise" id="venise" /> <label for="venise"><?php echo TXT_RESER_COUNTRY_7 ?></label><br>
-                            </p>
-                            <p>
-                                <label for="booking_day">Jour d'arrivée :</label>
-                                <select name="day" id="day">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <select name="month" id="month">
-                                    <option value="01"><?php echo TXT_RESER_MONTH_1 ?></option>
-                                    <option value="02"><?php echo TXT_RESER_MONTH_2 ?></option>
-                                    <option value="03"><?php echo TXT_RESER_MONTH_3 ?></option>
-                                    <option value="04"><?php echo TXT_RESER_MONTH_4 ?></option>
-                                    <option value="05"><?php echo TXT_RESER_MONTH_5 ?></option>
-                                    <option value="06"><?php echo TXT_RESER_MONTH_6 ?></option>
-                                    <option value="07"><?php echo TXT_RESER_MONTH_7 ?></option>
-                                    <option value="08"><?php echo TXT_RESER_MONTH_8 ?></option>
-                                    <option value="09"><?php echo TXT_RESER_MONTH_9 ?></option>
-                                    <option value="10"><?php echo TXT_RESER_MONTH_10 ?></option>
-                                    <option value="11"><?php echo TXT_RESER_MONTH_11 ?></option>
-                                    <option value="12"><?php echo TXT_RESER_MONTH_12 ?></option>
-                                </select>
-                                <select name="year" id="year">
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                </select>
-                            </p>         
+                        <legend  class="d-block p-2 bg-danger text-white"><?php echo TXT_CLAIM_1 ?></legend>
+                            <h2 class="center">
+                                <?php echo TXT_CLAIM_2 ?><br><br>
+</h2>        
                     </fieldset>  
                 </div>
                 <div id="coordonnees">
@@ -192,21 +120,42 @@ if(isset($_COOKIE["user"])){
                             </p>
                             <p>
                                 <label for="email"><?php echo TXT_RESER_EMAIL ?></label> <br>
-                                <input type="email" name="email" id="email" placeholder="contact@hyonos.com" size="150" required />
+                                <input type="email" name="email" id="email" placeholder="contact@hypnos.com" size="150" required />
                             </p>
                             <p>
                                 <label for="email"><?php echo TXT_RESER_CONFIRMEDEMAIL ?></label> <br>
-                                <input type="email" name="email" id="email" placeholder="contact@hyonos.com" size="150" required />
+                                <input type="email" name="email" id="email" placeholder="contact@hypnos.com" size="150" required />
                             </p>
                             <p>
                                 <label for="phone"><?php echo TXT_RESER_PHONE ?></label> <br>
                                 <input type="phone" name="phone" id="phone" placeholder="01 02 03 04 05" size="150" required />
                             </p>
+</legend>
                     </fieldset>
+                
+                <p>
+                                <?php echo TXT_CLAIM_3 ?><br>
+                                <input type="radio" name="claim" value="hotel" id="hotel" /> <label for="hotel"><?php echo TXT_CLAIM_4 ?></label><br>
+                                <input type="radio" name="claim" value="worker" id="worker" /> <label for="worker"><?php echo TXT_CLAIM_5 ?></label><br>
+                                <input type="radio" name="claim" value="price" id="price" /> <label for="price"><?php echo TXT_CLAIM_6 ?></label><br>
+                                <input type="radio" name="claim" value="extra" id="extra" /> <label for="extra"><?php echo TXT_CLAIM_7 ?></label><br>
+                                <input type="radio" name="claim" value="room" id="room" /> <label for="room"><?php echo TXT_CLAIM_8 ?></label><br>
+                                <input type="radio" name="claim" value="restaurant" id="restaurant" /> <label for="restaurant"><?php echo TXT_CLAIM_9 ?></label><br>
+                                <input type="radio" name="claim" value="other" id="other" /> <label for="other"><?php echo TXT_CLAIM_10 ?></label><br>
+                            </p>
+                            <div class="md-form">
+    <textarea type="text" id="message" name="message" placeholder="Reclamation , Beschwerde , Complaint , Queja"  size="150" rows="5" class="form-control md-textarea"></textarea>
+    <label for="message">
+        <?php echo TXT_CLAIM_AREA ?>
+    </label>
+</div>
+                <input type="submit" value="<?php echo TXT_CLAIM_SEND ?>" class="btn btn-danger"/>
                 </div>
-                <input type="submit" value="<?php echo TXT_RESER_CONFIRMED ?>" class="btn btn-danger"/>
             </form>      
         </section>
+        </div>
+</div>
+</div>
 
           <!-- Footer -->
 <br>

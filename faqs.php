@@ -1,5 +1,5 @@
 <?php
-$mainTitle="Hyonos - Covid 19";
+$mainTitle = "Hypnos - FAQs";
 require_once "header.php";
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
 if($lang = 'fr'){
@@ -24,14 +24,21 @@ setcookie("lang", $lang, time()+$expire);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
     <title><?php echo $mainTitle ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Menu Mavigation  : -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#dc143c">
+
+<!-- Bar Covid -->
+
+<div class="alert alert-danger" role="alert">
+    <a href="covid.php"><h6><?php echo TXT_INFO_COVID ?></h6></a>
+</div>
+
+<!-- Menu Mavigation  : -->
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#dc143c">
         <a class="navbar-brand" href="index.php">
         <img src="media/image/hypnos Badge.jpg" style="width: 100px;height: 100px;" alt="Hypnos - World Hôtel">
         </a>
@@ -68,47 +75,69 @@ setcookie("lang", $lang, time()+$expire);
                 </li>
             </ul>
         </div>
-    </nav> 
-<div class="alert alert-danger" role="alert">
-    <div class="redCovid">
-    <p>
-      <?php echo TXT_PAGES_COVID_1 ?><br>
-</p>
-</div>
-</div>
-<div class="infoH1Covid">
-<h1>
-  <?php echo TXT_PAGES_COVID_2 ?>
-</h1>
-</div>
-<p>
-  <ul>
-    <li><strong><?php echo TXT_PAGES_COVID_3 ?> : </strong><?php echo TXT_PAGES_COVID_3B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_4 ?> : </strong><?php echo TXT_PAGES_COVID_4B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_5 ?> : </strong><?php echo TXT_PAGES_COVID_5B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_6 ?> : </strong><?php echo TXT_PAGES_COVID_6B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_7 ?> : </strong><?php echo TXT_PAGES_COVID_7B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_8 ?> : </strong><?php echo TXT_PAGES_COVID_8B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_9 ?> : </strong><?php echo TXT_PAGES_COVID_9B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_10 ?> : </strong><?php echo TXT_PAGES_COVID_10B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_11 ?> : </strong><?php echo TXT_PAGES_COVID_11B ?></li>
-    <li><strong><?php echo TXT_PAGES_COVID_12 ?> : </strong><?php echo TXT_PAGES_COVID_12B ?></li>
-    <li><strong>
-      <br>
-      <br>
-      <em> <?php echo TXT_PAGES_COVID_INFO ?> </em>
-</p>
+    </nav>   
 <br>
-<br>
-<br>
-<div class="center">
-<h1><a href="contact.php">Besoin de renseignement supplémentaire ? </a>
-</h1>
-</div>
 
-<!-- Footer -->
+<!-- FAQS -->
 
-<footer class="mainfooter" role="contentinfo">  
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <?php echo TXT_FAQS_1 ?>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong><?php echo TXT_FAQS_1A ?></strong> <?php echo TXT_FAQS_1B ?><a href="reservation.php"><?php echo TXT_FAQS_1L ?> </a>
+      </div>
+    </div>
+  </div>
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <?php echo TXT_FAQS_2 ?>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong><?php echo TXT_FAQS_2A ?></strong> <?php echo TXT_FAQS_2B ?><a href="claim.php"><?php echo TXT_FAQS_2L ?> </a>
+      </div>
+    </div>
+  </div>
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <?php echo TXT_FAQS_3 ?>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong><?php echo TXT_FAQS_3A ?></strong> <?php echo TXT_FAQS_3B ?><a href="price.php"><?php echo TXT_FAQS_3L ?> </a>
+      </div>
+    </div>
+  </div>
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <?php echo TXT_FAQS_4 ?>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong><?php echo TXT_FAQS_4A ?></strong> <?php echo TXT_FAQS_4B ?><a href="contact.php"><?php echo TXT_FAQS_4L ?> </a>
+      </div>
+    </div>
+  </div>
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <?php echo TXT_FAQS_5 ?>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong><?php echo TXT_FAQS_5A ?></strong> <?php echo TXT_FAQS_5B ?><a href="contact.php"><?php echo TXT_FAQS_5L ?> </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="mainfooter" role="contentinfo">  
   <div class="footer-middle">  
   <div class="container">  
     <div class="row">  
@@ -118,7 +147,7 @@ setcookie("lang", $lang, time()+$expire);
             <?php echo TXT_FOOTER_DESCRIPTION ?>
           </h4>  
           <ul class="list-unstyled">  
-            <li> <a href="santorin.php"><?php echo TXT_FOOTER_COUNTRY_1 ?></a>></li>  
+            <li> <a href="santorin.php"><?php echo TXT_FOOTER_COUNTRY_1 ?></a></li>  
             <li> <a href="maldive.php"><?php echo TXT_FOOTER_COUNTRY_2 ?></a></li>  
             <li> <a href="marrakech.php"><?php echo TXT_FOOTER_COUNTRY_3 ?></a></li>  
             <li> <a href="paris.php"><?php echo TXT_FOOTER_COUNTRY_4 ?></a></li>  
@@ -152,7 +181,7 @@ setcookie("lang", $lang, time()+$expire);
             <li> <a href="mailto:contact@hypnos.chouphaidana.org"><?php echo TXT_NAME_HOTEL_MAIL_4 ?></a> </li>  
             <li> <a href="mailto:contact@hypnos.chouphaidana.org"><?php echo TXT_NAME_HOTEL_MAIL_5 ?></a> </li>  
             <li> <a href="mailto:contact@hypnos.chouphaidana.org"><?php echo TXT_NAME_HOTEL_MAIL_6 ?></a> </li>
-            <li> <a href="mailto:contact@hypnos.chouphaidana.org"><?php echo TXT_NAME_HOTEL_MAIL_7 ?></a> </li> 
+            <li> <a href="mailto:em"><?php echo TXT_NAME_HOTEL_MAIL_7 ?></a> </li> 
           </ul>    
         </div>  
       </div>  
@@ -162,7 +191,7 @@ setcookie("lang", $lang, time()+$expire);
             <li> <a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"> <em class="fa fa-facebook"> </em> </a> </li>    
             <li> <a href="https://fr.linkedin.com/" class="icoLinkedin" title="Linkedin"> <em class="fa fa-linkedin"> </em> </a> </li>   
               <li> <a href="https://www.youtube.com/" class="icoYoutube" title="Youtube"> <em class="fa fa-youtube"> </em></a></li>  
-            </ul>              
+            </ul>               
     </div>  
     </div>  
     <div class="row">  
@@ -175,6 +204,3 @@ setcookie("lang", $lang, time()+$expire);
 </footer>
 
   <!-- Footer -->
-  
-</body>
-</html>

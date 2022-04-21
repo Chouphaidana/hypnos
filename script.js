@@ -1,3 +1,4 @@
+
 id = setIntervale(frame, 5);
 function myMove() {
     let id = null;
@@ -15,3 +16,9 @@ function myMove() {
         }
     }
 }
+
+$(function() {
+    $("#btnShow").click(function() {
+        $("#sampleModal").modal("show");
+    });
+});

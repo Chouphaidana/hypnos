@@ -1,0 +1,66 @@
+
+
+{
+    "id":"Bali",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290,
+    "Appartement" : 250
+}
+
+{
+    "id": "Les Madives",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290,
+    "Chambre sur Piloti" : 250
+}
+
+{
+    "id":"Bali",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290,
+    "Appartement" : 250
+}
+
+{
+    "id":"Marrakech",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290
+}
+
+{
+    "id":"Paris",
+    "Chambre Classique" : 110,
+    "Chambre Luxe" : 180,
+    "Chambre Vue sur la Tour Eiffel": 290,
+    "Appartement" : 250,
+    "Appartement Vue sur la Tour Eiffel": 250
+}
+
+{
+    "id":"Salzbourg",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290
+}
+
+{
+    "id":"Santorin",
+    "Chambre Classique" : 110,
+    "Chambre Supérieur" : 180,
+    "Chambre Luxe" : 290
+}
+
+{
+    "id":"Venise",
+    "Chambre Classique" : 110,
+    "Chambre Luxe" : 180,
+    "Chambre Luxe Vue sur le Canal" : 290,
+    "Appartement" : 250,
+    "Appartement Vue sur le Canal":250
+}
+
+
